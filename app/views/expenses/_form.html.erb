@@ -13,11 +13,15 @@
 
   <div class="field">
     <%= f.label :value %><br />
-    <%= f.text_field :value %>
+    <%= f.text_field :value, :size=>8 %> &euro;
   </div>
   <div class="field">
     <%= f.label :date %><br />
     <%= f.date_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description, :rows=>3, :cols=>30 %>
   </div>
   <div class="actions">
     <%= f.submit %>

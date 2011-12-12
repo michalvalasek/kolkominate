@@ -44,6 +44,8 @@ class ExpensesController < ApplicationController
   # POST /expenses.json
   def create
     @expense = Expense.new(params[:expense])
+    @expense.currency_id = Currency.find_by_name('Euro').id
+    @expense.user_id = current_user.id
 
     respond_to do |format|
       if @expense.save

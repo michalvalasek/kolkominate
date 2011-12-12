@@ -1,15 +1,21 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Value:</b>
-  <%= @expense.value %>
+  <b>Výdavok:</b>
+  <%= @expense.value %> <%= @expense.currency.symbol.html_safe %>
 </p>
 
 <p>
-  <b>Date:</b>
+  <b>Dátum:</b>
   <%= @expense.date %>
 </p>
 
+<% if @expense.description %>
+<p>
+  <b>Popis:</b>
+  <%= @expense.description %>
+</p>
+<% end %>
 
-<%= link_to 'Edit', edit_expense_path(@expense) %> |
-<%= link_to 'Back', expenses_path %>
+<%= link_to 'Upraviť', edit_expense_path(@expense) %> |
+<%= link_to 'Späť', expenses_path %>
