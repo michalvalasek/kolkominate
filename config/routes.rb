@@ -1,4 +1,8 @@
 Kolkominate::Application.routes.draw do
+  resources :tags
+
+  resources :expenses
+
   get "public/index"
 
   devise_for :users
