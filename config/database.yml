@@ -38,6 +38,6 @@ production:
   reconnect: false
   database: kolkominate_production
   pool: 5
-  username: root
-  password:
+  username: kolkominate
+  password: Miname vela dat
   host: localhost
