@@ -26,11 +26,12 @@ test:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: kolkominate_test
   pool: 5
+  host: localhost
   username: root
   password:
-  host: localhost
+  database: kolkominate_test
+  socket: /Applications/XAMPP/xamppfiles/var/mysql/mysql.sock
 
 production:
   adapter: mysql2
