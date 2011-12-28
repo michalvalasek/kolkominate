@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Výdavok:</b>
+  <%= @expense.value %> <%= @expense.currency.symbol.html_safe %>
+</p>
+
+<p>
+  <b>Dátum:</b>
+  <%= @expense.date %>
+</p>
+
+<% if @expense.categories %>
+<p>
+  <b>Kategórie:</b>
+  <%= @expense.categories.join(", ") %>
+</p>
+<% end %>
+
+<% if @expense.description %>
+<p>
+  <b>Popis:</b>
+  <%= @expense.description %>
+</p>
+<% end %>
+
+<%= link_to 'Upraviť', edit_expense_path(@expense) %> |
+<%= link_to 'Späť', expenses_path %>

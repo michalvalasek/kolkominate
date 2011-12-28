@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
@@ -5,3 +7,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Currency.delete_all
+Currency.create(name: 'Euro', symbol: '&euro;' )
+Currency.create(name: 'Česká koruna', symbol: 'Kč' )
+Currency.create(name: 'Dollar', symbol: '&#36;' )

@@ -10,9 +10,9 @@
 
 	<div id="usernav">
 		<% if user_signed_in? %>
-		  Ste prihlásený ako <%= current_user.email %>. Chcete sa <%= link_to "odhlásiť", destroy_user_session_path %>?
+		  Ste prihlásený ako <%= current_user.email %>. Chcete sa <%= link_to "odhlásiť", logout_path %>?
 		<% else %>
-			<%= link_to "Prihláste sa", new_user_session_path %> alebo sa <%= link_to "zaregistrujte", new_user_registration_path %>
+			<%= link_to "Prihláste sa", login_path %> alebo sa <%= link_to "zaregistrujte", new_user_registration_path %>
 		<% end %>
 	</div>
 
