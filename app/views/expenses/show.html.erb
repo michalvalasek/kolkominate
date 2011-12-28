@@ -10,6 +10,13 @@
   <%= @expense.date %>
 </p>
 
+<% if @expense.categories %>
+<p>
+  <b>Kategórie:</b>
+  <%= @expense.categories.join(", ") %>
+</p>
+<% end %>
+
 <% if @expense.description %>
 <p>
   <b>Popis:</b>

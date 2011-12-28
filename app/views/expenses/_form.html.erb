@@ -19,6 +19,10 @@
     <%= f.label :date %><br />
     <%= f.date_select :date %>
   </div>
+	<div class="field">
+    <%= f.label :categories %><br />
+    <%= text_field_tag :categories, @assigned_categories %>
+  </div>
   <div class="field">
     <%= f.label :description %><br />
     <%= f.text_area :description, :rows=>3, :cols=>30 %>

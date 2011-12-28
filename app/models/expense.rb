@@ -7,4 +7,6 @@ class Expense < ActiveRecord::Base
 
 	belongs_to :user
 	belongs_to :currency
+
+	attr_taggable :categories
 end

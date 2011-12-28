@@ -28,6 +28,7 @@ class ExpensesController < ApplicationController
   # GET /expenses/new.json
   def new
     @expense = Expense.new
+    @assigned_categories = ""
 
     respond_to do |format|
       format.html # new.html.erb
@@ -38,6 +39,7 @@ class ExpensesController < ApplicationController
   # GET /expenses/1/edit
   def edit
     @expense = Expense.find(params[:id])
+	  @assigned_categories = @expense.categories.join(",")
   end
 
   # POST /expenses
@@ -61,7 +63,8 @@ class ExpensesController < ApplicationController
   # PUT /expenses/1
   # PUT /expenses/1.json
   def update
-    @expense = Expense.find(params[:id])
+	  @expense = Expense.find(params[:id])
+	  @expense.categories = params[:categories].split(',')
 
     respond_to do |format|
       if @expense.update_attributes(params[:expense])

@@ -4,7 +4,7 @@
   <tr>
     <th>Suma</th>
     <th>Dátum</th>
-    <th>Popis</th>
+    <th>Kategórie</th>
     <th></th>
     <th></th>
   </tr>
@@ -13,7 +13,7 @@
   <tr>
     <td><%= expense.value %> <%= expense.currency.symbol.html_safe %></td>
     <td><%= expense.date %></td>
-	  <td><%= expense.description %></td>
+	  <td><%= expense.categories.join(", ") %></td>
     <td><%= link_to 'Show', expense %></td>
     <td><%= link_to 'Edit', edit_expense_path(expense) %></td>
     <td><%= link_to 'Destroy', expense, confirm: 'Are you sure?', method: :delete %></td>
