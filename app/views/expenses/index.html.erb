@@ -1,24 +1,28 @@
-<h1>Listing expenses</h1>
+<h2>Listing expenses</h2>
 
-<table>
-  <tr>
-    <th>Suma</th>
-    <th>Dátum</th>
-    <th>Kategórie</th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @expenses.each do |expense| %>
-  <tr>
-    <td><%= expense.value %> <%= expense.currency.symbol.html_safe %></td>
-    <td><%= expense.date %></td>
-	  <td><%= expense.categories.join(", ") %></td>
-    <td><%= link_to 'Show', expense %></td>
-    <td><%= link_to 'Edit', edit_expense_path(expense) %></td>
-    <td><%= link_to 'Destroy', expense, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
+<table cellpadding="0" cellspacing="0" width="100%" class="sortable">
+  <thead>
+		<tr>
+			<th>Suma</th>
+			<th>Dátum</th>
+			<th>Kategórie</th>
+			<th></th>
+		</tr>
+  </thead>
+  <tbody>
+    <% @expenses.each do |expense| %>
+			<tr class="<%= cycle("even","odd") %>">
+				<td><%= expense.value %> <%= expense.currency.symbol.html_safe %></td>
+				<td><%= expense.date %></td>
+				<td><%= expense.categories.join(", ") %></td>
+				<td>
+				  <%= link_to 'Show', expense %> |
+					<%= link_to 'Edit', edit_expense_path(expense) %> |
+					<%= link_to 'Destroy', expense, confirm: 'Are you sure?', method: :delete %>
+			  </td>
+			</tr>
+		<% end %>
+  </tbody>
 </table>
 
 <br />

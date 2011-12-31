@@ -1,31 +1,65 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-  <title>Kolkominate.sk</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
+	<meta http-equiv="X-UA-Compatible" content="IE=7" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="." />
+	<meta name="keywords" content="." />
+
+	<title>Kolkominate.sk</title>
+
+  <%= stylesheet_link_tag "application" %>
+
+	<!--[if lt IE 9]>
+	<%= stylesheet_link_tag "ie" %>
+	<![endif]-->
+
+	<%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
 
-	<div id="usernav">
+	<div id="header">
+		<h1><a href="#">Kolkominate.sk</a></h1>
 		<% if user_signed_in? %>
-		  Ste prihlásený ako <%= current_user.email %>. Chcete sa <%= link_to "odhlásiť", logout_path %>?
-		<% else %>
-			<%= link_to "Prihláste sa", login_path %> alebo sa <%= link_to "zaregistrujte", new_user_registration_path %>
+		  <div class="userprofile">
+			<ul>
+				<li><a href="#"><img src="images/avatar.gif" alt="" /> <%= current_user.email %></a>
+					<ul>
+						<li><%= link_to "Odhlásiť sa", logout_path %></li>
+					</ul>
+				</li>
+			</ul>
+		</div>		<!-- .userprofile ends -->
 		<% end %>
+	</div>			<!-- #header ends -->
+
+	<div id="sidebar">
+	  <ul id="nav">
+	    <li><a href="#"><strong><img src="images/nav/dashboard" alt="Dashboard" />Dashboard</strong></a></li>
+	  </ul>
 	</div>
 
-	<h1>Kolkominate.sk</h1>
+	<div id="content">
 
-	<% if flash[:notice] %>
-		<p class="notice"><%= flash[:notice] %></p>
-	<% end  %>
-	<% if flash[:alert] %>
-		<p class="alert"><%= flash[:alert] %></p>
-	<% end %>
+	  <div class="breadcrumb">
+		  <%= link_to "Home", expenses_path %>
+	  </div>
 
-	<%= yield %>
+		<% if flash[:notice] %>
+			<div class="message info"><%= flash[:notice] %></div>
+		<% end  %>
+		<% if flash[:alert] %>
+			<div class="message errormsg"><%= flash[:alert] %></div>
+		<% end %>
+		<% if flash[:success] %>
+			<div class="message sucess"><%= flash[:success] %></div>
+		<% end %>
+
+	  <%= yield %>
+	</div>
 
 </body>
 </html>
