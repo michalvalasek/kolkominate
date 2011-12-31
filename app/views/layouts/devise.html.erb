@@ -19,45 +19,27 @@
   <%= csrf_meta_tags %>
 </head>
 
-<body>
+<body class="loginpage">
 
 	<div id="header">
 		<h1><a href="#">Kolkominate.sk</a></h1>
-		<% if user_signed_in? %>
-		  <div class="userprofile">
-			<ul>
-				<li><a href="#"><img src="images/avatar.gif" alt="" /> <%= current_user.email %></a>
-					<ul>
-						<li><%= link_to "Odhlásiť sa", logout_path %></li>
-					</ul>
-				</li>
-			</ul>
-		</div>		<!-- .userprofile ends -->
-		<% end %>
 	</div>			<!-- #header ends -->
 
-	<div id="sidebar">
-	  <ul id="nav">
-	    <li><a href="#"><strong><img src="images/nav/dashboard" alt="Dashboard" />Dashboard</strong></a></li>
-	  </ul>
-	</div>
-
-	<div id="content">
-
-	  <div class="breadcrumb">
-		  <%= link_to "Home", expenses_path %>
-	  </div>
-
+	<div id="content" class="loginbox">
 		<% if flash[:notice] %>
-			<div class="message info"><%= flash[:notice] %></div>
+			<div class="message info" style="display: block;">
+			  <%= flash[:notice] %>
 		<% end  %>
 		<% if flash[:alert] %>
-			<div class="message errormsg"><%= flash[:alert] %></div>
+			<div class="message errormsg" style="display: block;">
+			  <%= flash[:alert] %>
 		<% end %>
 		<% if flash[:success] %>
-			<div class="message sucess"><%= flash[:success] %></div>
+			<div class="message sucess" style="display: block;">
+			  <%= flash[:success] %>
 		<% end %>
-
+				<span class="close" title="Dismiss"></span>
+			</div>
 	  <%= yield %>
 	</div>
 
