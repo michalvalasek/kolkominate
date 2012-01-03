@@ -39,7 +39,8 @@ group :test do
 end
 
 group :production do
-	gem 'therubyracer'
+  gem 'rake', '>= 0.9.2'
+  gem 'therubyracer'
 	# Use unicorn as the web server
 	gem 'unicorn'
 end
