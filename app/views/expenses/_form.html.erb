@@ -1,33 +1,23 @@
+<%= render 'shared/form_errors', target: @expense %>
+
 <%= form_for(@expense) do |f| %>
-  <% if @expense.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@expense.errors.count, "error") %> prohibited this expense from being saved:</h2>
-
-      <ul>
-      <% @expense.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
   <div class="field">
-    <%= f.label :value %><br />
+    <%= f.label :value, "Suma" %><br />
     <%= f.text_field :value, :size=>8 %> &euro;
   </div>
   <div class="field">
-    <%= f.label :date %><br />
+    <%= f.label :date, "Dátum" %><br />
     <%= f.date_select :date %>
   </div>
 	<div class="field">
-    <%= f.label :categories %><br />
-    <%= text_field_tag :categories, @assigned_categories %>
+    <%= f.label :categories, "Kategórie oddelené čiarkami" %><br />
+    <%= text_field_tag :categories, @assigned_categories, :size=>100, :class=>'text' %>
   </div>
   <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description, :rows=>3, :cols=>30 %>
+    <%= f.label :description, "Popis" %><br />
+    <%= f.text_area :description %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Uložiť" %>
   </div>
 <% end %>

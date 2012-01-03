@@ -48,6 +48,7 @@ class ExpensesController < ApplicationController
     @expense = Expense.new(params[:expense])
     @expense.currency_id = Currency.find_by_name('Euro').id
     @expense.user_id = current_user.id
+    @expense.categories = params[:categories].split(',')
 
     respond_to do |format|
       if @expense.save

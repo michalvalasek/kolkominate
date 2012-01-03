@@ -1,4 +1,4 @@
-<h2>Listing expenses</h2>
+<h2>Výdavky</h2>
 
 <table cellpadding="0" cellspacing="0" width="100%" class="sortable">
   <thead>
@@ -16,9 +16,9 @@
 				<td><%= expense.date %></td>
 				<td><%= expense.categories.join(", ") %></td>
 				<td>
-				  <%= link_to 'Show', expense %> |
-					<%= link_to 'Edit', edit_expense_path(expense) %> |
-					<%= link_to 'Destroy', expense, confirm: 'Are you sure?', method: :delete %>
+				  <%= link_to 'Detaily', expense %> |
+					<%= link_to 'Upraviť', edit_expense_path(expense) %> |
+					<%= link_to 'Zmazať', expense, confirm: 'Ste si istý?', method: :delete %>
 			  </td>
 			</tr>
 		<% end %>
@@ -27,4 +27,4 @@
 
 <br />
 
-<%= link_to 'New Expense', new_expense_path %>
+<%= link_to 'Pridať výdavok', new_expense_path %>
