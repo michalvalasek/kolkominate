@@ -9,4 +9,8 @@ class Expense < ActiveRecord::Base
 	belongs_to :currency
 
 	attr_taggable :categories
+
+	def value=(value)
+		write_attribute(:value,value.sub(",","."))
+	end
 end

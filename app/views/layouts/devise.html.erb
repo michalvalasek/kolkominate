@@ -38,8 +38,11 @@
 			<div class="message sucess" style="display: block;">
 			  <%= flash[:success] %>
 		<% end %>
+		<% unless flash.empty? %>
 				<span class="close" title="Dismiss"></span>
 			</div>
+		<% end %>
+
 	  <%= yield %>
 	</div>
 
