@@ -16,7 +16,7 @@ module Kolkominate
     # -- all .rb files in that directory are automatically loaded.
 
     # Custom directories with classes and modules you want to be autoloadable.
-    # config.autoload_paths += %W(#{config.root}/extras)
+    config.autoload_paths += %W(#{config.root}/app/form_builders)
 
     # Only load the plugins named here, in the order given (default is alphabetical).
     # :all can be used as a placeholder for all plugins not explicitly named.
@@ -48,6 +48,9 @@ module Kolkominate
 	  # Set special layout for some devise actions, such as login screen
     config.to_prepare do
 		  Devise::SessionsController.layout proc{ |controller| action_name=='new' ? 'devise' : 'application' }
-	  end
+    end
+
+	  # Change style of the form fields with errors
+	  ActionView::Base.field_error_proc = Proc.new { |html_tag, instance| html_tag }
   end
 end
