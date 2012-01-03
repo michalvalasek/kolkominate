@@ -1,0 +1,296 @@
+E, [2011-12-15T18:28:23.884845 #31860] ERROR -- : adding listener failed addr=/tmp/unicorn.kolkominate.sock (in use)
+E, [2011-12-15T18:28:23.885187 #31860] ERROR -- : retrying in 0.5 seconds (4 tries left)
+E, [2011-12-15T18:28:24.385699 #31860] ERROR -- : adding listener failed addr=/tmp/unicorn.kolkominate.sock (in use)
+E, [2011-12-15T18:28:24.385866 #31860] ERROR -- : retrying in 0.5 seconds (3 tries left)
+E, [2011-12-15T18:28:24.886354 #31860] ERROR -- : adding listener failed addr=/tmp/unicorn.kolkominate.sock (in use)
+E, [2011-12-15T18:28:24.886529 #31860] ERROR -- : retrying in 0.5 seconds (2 tries left)
+E, [2011-12-15T18:28:25.386971 #31860] ERROR -- : adding listener failed addr=/tmp/unicorn.kolkominate.sock (in use)
+E, [2011-12-15T18:28:25.387117 #31860] ERROR -- : retrying in 0.5 seconds (1 tries left)
+E, [2011-12-15T18:28:25.887972 #31860] ERROR -- : adding listener failed addr=/tmp/unicorn.kolkominate.sock (in use)
+E, [2011-12-15T18:28:25.888136 #31860] ERROR -- : retrying in 0.5 seconds (0 tries left)
+E, [2011-12-15T18:28:26.388763 #31860] ERROR -- : adding listener failed addr=/tmp/unicorn.kolkominate.sock (in use)
+/root/.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/unicorn-4.1.1/lib/unicorn/socket_helper.rb:137:in `initialize': Address already in use - /tmp/unicorn.kolkominate.sock (Errno::EADDRINUSE)
+	from /root/.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/unicorn-4.1.1/lib/unicorn/socket_helper.rb:137:in `new'
+	from /root/.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/unicorn-4.1.1/lib/unicorn/socket_helper.rb:137:in `bind_listen'
+	from /root/.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/unicorn-4.1.1/lib/unicorn/http_server.rb:222:in `listen'
+	from /root/.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/unicorn-4.1.1/lib/unicorn/http_server.rb:733:in `block in inherit_listeners!'
+	from /root/.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/unicorn-4.1.1/lib/unicorn/http_server.rb:733:in `each'
+	from /root/.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/unicorn-4.1.1/lib/unicorn/http_server.rb:733:in `inherit_listeners!'
+	from /root/.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/unicorn-4.1.1/lib/unicorn/http_server.rb:121:in `start'
+	from /root/.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/unicorn-4.1.1/bin/unicorn:121:in `<top (required)>'
+	from /root/.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/bin/unicorn:19:in `load'
+	from /root/.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/bin/unicorn:19:in `<main>'
+I, [2011-12-15T18:35:26.672384 #397]  INFO -- : unlinking existing socket=/tmp/unicorn.kolkominate.sock
+I, [2011-12-15T18:35:26.674363 #397]  INFO -- : listening on addr=/tmp/unicorn.kolkominate.sock fd=5
+I, [2011-12-15T18:35:26.675048 #397]  INFO -- : worker=0 spawning...
+I, [2011-12-15T18:35:26.691624 #397]  INFO -- : worker=1 spawning...
+I, [2011-12-15T18:35:26.695129 #400]  INFO -- : worker=0 spawned pid=400
+I, [2011-12-15T18:35:26.695427 #400]  INFO -- : Refreshing Gem list
+I, [2011-12-15T18:35:26.709314 #397]  INFO -- : master process ready
+I, [2011-12-15T18:35:26.721517 #403]  INFO -- : worker=1 spawned pid=403
+I, [2011-12-15T18:35:26.721792 #403]  INFO -- : Refreshing Gem list
+I, [2011-12-15T18:35:42.975253 #403]  INFO -- : worker=1 ready
+I, [2011-12-15T18:35:42.979185 #400]  INFO -- : worker=0 ready
+95.103.226.26 - - [15/Dec/2011 18:35:46] "GET /public/index HTTP/1.0" 500 9952 3.9453
+I, [2011-12-15T18:39:11.571962 #397]  INFO -- : reaped #<Process::Status: pid 400 exit 0> worker=0
+I, [2011-12-15T18:39:11.572123 #397]  INFO -- : reaped #<Process::Status: pid 403 exit 0> worker=1
+I, [2011-12-15T18:39:11.572275 #397]  INFO -- : master complete
+I, [2011-12-15T18:41:37.626427 #1309]  INFO -- : unlinking existing socket=/tmp/unicorn.kolkominate.sock
+I, [2011-12-15T18:41:37.626889 #1309]  INFO -- : listening on addr=/tmp/unicorn.kolkominate.sock fd=5
+I, [2011-12-15T18:41:37.627424 #1309]  INFO -- : worker=0 spawning...
+I, [2011-12-15T18:41:37.641013 #1309]  INFO -- : worker=1 spawning...
+I, [2011-12-15T18:41:37.644760 #1312]  INFO -- : worker=0 spawned pid=1312
+I, [2011-12-15T18:41:37.645015 #1312]  INFO -- : Refreshing Gem list
+I, [2011-12-15T18:41:37.655107 #1315]  INFO -- : worker=1 spawned pid=1315
+I, [2011-12-15T18:41:37.655495 #1315]  INFO -- : Refreshing Gem list
+I, [2011-12-15T18:41:37.663628 #1309]  INFO -- : master process ready
+I, [2011-12-15T18:41:51.486513 #1315]  INFO -- : worker=1 ready
+I, [2011-12-15T18:41:51.491378 #1312]  INFO -- : worker=0 ready
+cache: [GET /public] miss
+cache: [GET /public/index] miss
+E, [2011-12-15T18:44:31.127894 #1807] ERROR -- : adding listener failed addr=/tmp/unicorn.kolkominate.sock (in use)
+E, [2011-12-15T18:44:31.128214 #1807] ERROR -- : retrying in 0.5 seconds (4 tries left)
+E, [2011-12-15T18:44:31.628628 #1807] ERROR -- : adding listener failed addr=/tmp/unicorn.kolkominate.sock (in use)
+E, [2011-12-15T18:44:31.628759 #1807] ERROR -- : retrying in 0.5 seconds (3 tries left)
+E, [2011-12-15T18:44:32.129105 #1807] ERROR -- : adding listener failed addr=/tmp/unicorn.kolkominate.sock (in use)
+E, [2011-12-15T18:44:32.129231 #1807] ERROR -- : retrying in 0.5 seconds (2 tries left)
+E, [2011-12-15T18:44:32.629660 #1807] ERROR -- : adding listener failed addr=/tmp/unicorn.kolkominate.sock (in use)
+E, [2011-12-15T18:44:32.629817 #1807] ERROR -- : retrying in 0.5 seconds (1 tries left)
+E, [2011-12-15T18:44:33.130209 #1807] ERROR -- : adding listener failed addr=/tmp/unicorn.kolkominate.sock (in use)
+E, [2011-12-15T18:44:33.130329 #1807] ERROR -- : retrying in 0.5 seconds (0 tries left)
+E, [2011-12-15T18:44:33.630712 #1807] ERROR -- : adding listener failed addr=/tmp/unicorn.kolkominate.sock (in use)
+/root/.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/unicorn-4.1.1/lib/unicorn/socket_helper.rb:137:in `initialize': Address already in use - /tmp/unicorn.kolkominate.sock (Errno::EADDRINUSE)
+	from /root/.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/unicorn-4.1.1/lib/unicorn/socket_helper.rb:137:in `new'
+	from /root/.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/unicorn-4.1.1/lib/unicorn/socket_helper.rb:137:in `bind_listen'
+	from /root/.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/unicorn-4.1.1/lib/unicorn/http_server.rb:222:in `listen'
+	from /root/.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/unicorn-4.1.1/lib/unicorn/http_server.rb:733:in `block in inherit_listeners!'
+	from /root/.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/unicorn-4.1.1/lib/unicorn/http_server.rb:733:in `each'
+	from /root/.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/unicorn-4.1.1/lib/unicorn/http_server.rb:733:in `inherit_listeners!'
+	from /root/.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/unicorn-4.1.1/lib/unicorn/http_server.rb:121:in `start'
+	from /root/.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/unicorn-4.1.1/bin/unicorn:121:in `<top (required)>'
+	from /root/.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/bin/unicorn:19:in `load'
+	from /root/.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/bin/unicorn:19:in `<main>'
+I, [2011-12-15T18:44:45.077817 #1309]  INFO -- : reaped #<Process::Status: pid 1312 exit 0> worker=0
+I, [2011-12-15T18:44:45.078006 #1309]  INFO -- : reaped #<Process::Status: pid 1315 exit 0> worker=1
+I, [2011-12-15T18:44:45.078193 #1309]  INFO -- : master complete
+I, [2011-12-15T18:44:50.436397 #1879]  INFO -- : unlinking existing socket=/tmp/unicorn.kolkominate.sock
+I, [2011-12-15T18:44:50.436863 #1879]  INFO -- : listening on addr=/tmp/unicorn.kolkominate.sock fd=5
+I, [2011-12-15T18:44:50.437369 #1879]  INFO -- : worker=0 spawning...
+I, [2011-12-15T18:44:50.447570 #1882]  INFO -- : worker=0 spawned pid=1882
+I, [2011-12-15T18:44:50.447849 #1882]  INFO -- : Refreshing Gem list
+I, [2011-12-15T18:44:50.454187 #1879]  INFO -- : worker=1 spawning...
+I, [2011-12-15T18:44:50.467400 #1879]  INFO -- : master process ready
+I, [2011-12-15T18:44:50.472335 #1885]  INFO -- : worker=1 spawned pid=1885
+I, [2011-12-15T18:44:50.472572 #1885]  INFO -- : Refreshing Gem list
+I, [2011-12-15T18:45:01.524050 #1885]  INFO -- : worker=1 ready
+I, [2011-12-15T18:45:01.559221 #1882]  INFO -- : worker=0 ready
+cache: [GET /public/index] miss
+cache: [GET /public/index] miss
+cache: [GET /] miss
+cache: [GET /] miss
+cache: [GET /] miss
+cache: [GET /] miss
+cache: [GET /] miss
+cache: [GET /] miss
+cache: [GET /] miss
+cache: [GET /] miss
+I, [2011-12-15T19:19:03.430670 #1879]  INFO -- : reaped #<Process::Status: pid 1882 exit 0> worker=0
+I, [2011-12-15T19:19:03.430792 #1879]  INFO -- : reaped #<Process::Status: pid 1885 exit 0> worker=1
+I, [2011-12-15T19:19:03.430913 #1879]  INFO -- : master complete
+I, [2011-12-15T19:19:27.094680 #6375]  INFO -- : unlinking existing socket=/tmp/unicorn.kolkominate.sock
+I, [2011-12-15T19:19:27.095133 #6375]  INFO -- : listening on addr=/tmp/unicorn.kolkominate.sock fd=5
+I, [2011-12-15T19:19:27.095671 #6375]  INFO -- : worker=0 spawning...
+I, [2011-12-15T19:19:27.107796 #6375]  INFO -- : worker=1 spawning...
+I, [2011-12-15T19:19:27.112254 #6378]  INFO -- : worker=0 spawned pid=6378
+I, [2011-12-15T19:19:27.112511 #6378]  INFO -- : Refreshing Gem list
+I, [2011-12-15T19:19:27.123131 #6375]  INFO -- : master process ready
+I, [2011-12-15T19:19:27.132504 #6381]  INFO -- : worker=1 spawned pid=6381
+I, [2011-12-15T19:19:27.132855 #6381]  INFO -- : Refreshing Gem list
+I, [2011-12-15T19:19:37.806604 #6381]  INFO -- : worker=1 ready
+I, [2011-12-15T19:19:37.820145 #6378]  INFO -- : worker=0 ready
+I, [2011-12-15T19:20:37.518614 #6375]  INFO -- : reaped #<Process::Status: pid 6378 exit 0> worker=0
+I, [2011-12-15T19:20:37.518758 #6375]  INFO -- : reaped #<Process::Status: pid 6381 exit 0> worker=1
+I, [2011-12-15T19:20:37.518878 #6375]  INFO -- : master complete
+I, [2011-12-15T19:20:52.859497 #6614]  INFO -- : unlinking existing socket=/tmp/unicorn.kolkominate.sock
+I, [2011-12-15T19:20:52.859937 #6614]  INFO -- : listening on addr=/tmp/unicorn.kolkominate.sock fd=5
+I, [2011-12-15T19:20:52.860461 #6614]  INFO -- : worker=0 spawning...
+I, [2011-12-15T19:20:52.877065 #6614]  INFO -- : worker=1 spawning...
+I, [2011-12-15T19:20:52.878177 #6617]  INFO -- : worker=0 spawned pid=6617
+I, [2011-12-15T19:20:52.878607 #6617]  INFO -- : Refreshing Gem list
+I, [2011-12-15T19:20:52.892266 #6620]  INFO -- : worker=1 spawned pid=6620
+I, [2011-12-15T19:20:52.892542 #6620]  INFO -- : Refreshing Gem list
+I, [2011-12-15T19:20:52.899644 #6614]  INFO -- : master process ready
+I, [2011-12-15T19:21:01.544888 #6617]  INFO -- : worker=0 ready
+I, [2011-12-15T19:21:01.548187 #6620]  INFO -- : worker=1 ready
+95.103.226.26 - - [15/Dec/2011 19:21:06] "GET /public/index HTTP/1.0" 500 9910 1.1682
+I, [2011-12-15T19:36:52.972683 #6614]  INFO -- : reaped #<Process::Status: pid 6617 exit 0> worker=0
+I, [2011-12-15T19:36:52.972812 #6614]  INFO -- : reaped #<Process::Status: pid 6620 exit 0> worker=1
+I, [2011-12-15T19:36:52.972930 #6614]  INFO -- : master complete
+I, [2011-12-15T19:39:22.639453 #9002]  INFO -- : unlinking existing socket=/tmp/unicorn.kolkominate.sock
+I, [2011-12-15T19:39:22.640173 #9002]  INFO -- : listening on addr=/tmp/unicorn.kolkominate.sock fd=5
+I, [2011-12-15T19:39:22.643988 #9002]  INFO -- : worker=0 spawning...
+I, [2011-12-15T19:39:22.655853 #9002]  INFO -- : worker=1 spawning...
+I, [2011-12-15T19:39:22.661576 #9005]  INFO -- : worker=0 spawned pid=9005
+I, [2011-12-15T19:39:22.661887 #9005]  INFO -- : Refreshing Gem list
+I, [2011-12-15T19:39:22.679903 #9002]  INFO -- : master process ready
+I, [2011-12-15T19:39:22.684706 #9008]  INFO -- : worker=1 spawned pid=9008
+I, [2011-12-15T19:39:22.685093 #9008]  INFO -- : Refreshing Gem list
+I, [2011-12-15T19:39:33.404551 #9008]  INFO -- : worker=1 ready
+I, [2011-12-15T19:39:33.421488 #9005]  INFO -- : worker=0 ready
+cache: [GET /public/index] miss
+cache: [GET /public/index] miss
+I, [2011-12-15T19:43:05.660114 #9002]  INFO -- : reaped #<Process::Status: pid 9005 exit 0> worker=0
+I, [2011-12-15T19:43:05.660299 #9002]  INFO -- : reaped #<Process::Status: pid 9008 exit 0> worker=1
+I, [2011-12-15T19:43:05.660479 #9002]  INFO -- : master complete
+I, [2011-12-15T19:43:20.655279 #9576]  INFO -- : unlinking existing socket=/tmp/unicorn.kolkominate.sock
+I, [2011-12-15T19:43:20.655729 #9576]  INFO -- : listening on addr=/tmp/unicorn.kolkominate.sock fd=5
+I, [2011-12-15T19:43:20.656186 #9576]  INFO -- : Refreshing Gem list
+I, [2011-12-15T19:43:25.096941 #9576]  INFO -- : worker=0 spawning...
+I, [2011-12-15T19:43:25.116596 #9576]  INFO -- : worker=1 spawning...
+I, [2011-12-15T19:43:25.124172 #9590]  INFO -- : worker=0 spawned pid=9590
+I, [2011-12-15T19:43:25.124446 #9590]  INFO -- : worker=0 ready
+I, [2011-12-15T19:43:25.131596 #9576]  INFO -- : master process ready
+I, [2011-12-15T19:43:25.140627 #9593]  INFO -- : worker=1 spawned pid=9593
+I, [2011-12-15T19:43:25.140883 #9593]  INFO -- : worker=1 ready
+95.103.226.26 - - [15/Dec/2011 19:43:30] "GET /public/index HTTP/1.0" 500 9952 1.6885
+I, [2011-12-15T19:44:04.595039 #9576]  INFO -- : reaped #<Process::Status: pid 9590 exit 0> worker=0
+I, [2011-12-15T19:44:04.595168 #9576]  INFO -- : reaped #<Process::Status: pid 9593 exit 0> worker=1
+I, [2011-12-15T19:44:04.595333 #9576]  INFO -- : master complete
+I, [2011-12-15T19:53:09.885273 #11137]  INFO -- : unlinking existing socket=/tmp/unicorn.kolkominate.sock
+I, [2011-12-15T19:53:09.885784 #11137]  INFO -- : listening on addr=/tmp/unicorn.kolkominate.sock fd=3
+I, [2011-12-15T19:53:09.886212 #11137]  INFO -- : Refreshing Gem list
+I, [2011-12-15T19:53:14.111183 #11137]  INFO -- : worker=0 spawning...
+I, [2011-12-15T19:53:14.124514 #11151]  INFO -- : worker=0 spawned pid=11151
+I, [2011-12-15T19:53:14.124762 #11151]  INFO -- : worker=0 ready
+I, [2011-12-15T19:53:14.125057 #11137]  INFO -- : worker=1 spawning...
+I, [2011-12-15T19:53:14.134758 #11137]  INFO -- : master process ready
+I, [2011-12-15T19:53:14.140564 #11154]  INFO -- : worker=1 spawned pid=11154
+I, [2011-12-15T19:53:14.140776 #11154]  INFO -- : worker=1 ready
+E, [2011-12-15T19:54:10.098429 #11312] ERROR -- : adding listener failed addr=/tmp/unicorn.kolkominate.sock (in use)
+E, [2011-12-15T19:54:10.098790 #11312] ERROR -- : retrying in 0.5 seconds (4 tries left)
+E, [2011-12-15T19:54:10.599215 #11312] ERROR -- : adding listener failed addr=/tmp/unicorn.kolkominate.sock (in use)
+E, [2011-12-15T19:54:10.599373 #11312] ERROR -- : retrying in 0.5 seconds (3 tries left)
+E, [2011-12-15T19:54:11.099771 #11312] ERROR -- : adding listener failed addr=/tmp/unicorn.kolkominate.sock (in use)
+E, [2011-12-15T19:54:11.099933 #11312] ERROR -- : retrying in 0.5 seconds (2 tries left)
+E, [2011-12-15T19:54:11.600312 #11312] ERROR -- : adding listener failed addr=/tmp/unicorn.kolkominate.sock (in use)
+E, [2011-12-15T19:54:11.600445 #11312] ERROR -- : retrying in 0.5 seconds (1 tries left)
+E, [2011-12-15T19:54:12.100777 #11312] ERROR -- : adding listener failed addr=/tmp/unicorn.kolkominate.sock (in use)
+E, [2011-12-15T19:54:12.100929 #11312] ERROR -- : retrying in 0.5 seconds (0 tries left)
+E, [2011-12-15T19:54:12.601305 #11312] ERROR -- : adding listener failed addr=/tmp/unicorn.kolkominate.sock (in use)
+/root/.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/unicorn-4.1.1/lib/unicorn/socket_helper.rb:137:in `initialize': Address already in use - /tmp/unicorn.kolkominate.sock (Errno::EADDRINUSE)
+	from /root/.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/unicorn-4.1.1/lib/unicorn/socket_helper.rb:137:in `new'
+	from /root/.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/unicorn-4.1.1/lib/unicorn/socket_helper.rb:137:in `bind_listen'
+	from /root/.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/unicorn-4.1.1/lib/unicorn/http_server.rb:222:in `listen'
+	from /root/.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/unicorn-4.1.1/lib/unicorn/http_server.rb:733:in `block in inherit_listeners!'
+	from /root/.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/unicorn-4.1.1/lib/unicorn/http_server.rb:733:in `each'
+	from /root/.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/unicorn-4.1.1/lib/unicorn/http_server.rb:733:in `inherit_listeners!'
+	from /root/.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/unicorn-4.1.1/lib/unicorn/http_server.rb:121:in `start'
+	from /root/.rbenv/versions/1.9.2-p290/lib/ruby/gems/1.9.1/gems/unicorn-4.1.1/bin/unicorn_rails:209:in `<top (required)>'
+	from bin/unicorn_rails:16:in `load'
+	from bin/unicorn_rails:16:in `<main>'
+I, [2011-12-15T19:54:44.561805 #11137]  INFO -- : reaped #<Process::Status: pid 11151 exit 0> worker=0
+I, [2011-12-15T19:54:44.561926 #11137]  INFO -- : reaped #<Process::Status: pid 11154 exit 0> worker=1
+I, [2011-12-15T19:54:44.562042 #11137]  INFO -- : master complete
+I, [2011-12-15T19:54:51.853176 #11432]  INFO -- : unlinking existing socket=/tmp/unicorn.kolkominate.sock
+I, [2011-12-15T19:54:51.853618 #11432]  INFO -- : listening on addr=/tmp/unicorn.kolkominate.sock fd=3
+I, [2011-12-15T19:54:51.854037 #11432]  INFO -- : Refreshing Gem list
+I, [2011-12-15T19:54:56.886811 #11432]  INFO -- : worker=0 spawning...
+I, [2011-12-15T19:54:56.909842 #11432]  INFO -- : worker=1 spawning...
+I, [2011-12-15T19:54:56.916622 #11445]  INFO -- : worker=0 spawned pid=11445
+I, [2011-12-15T19:54:56.916897 #11445]  INFO -- : worker=0 ready
+I, [2011-12-15T19:54:56.924187 #11432]  INFO -- : master process ready
+I, [2011-12-15T19:54:56.932523 #11448]  INFO -- : worker=1 spawned pid=11448
+I, [2011-12-15T19:54:56.932762 #11448]  INFO -- : worker=1 ready
+cache: [GET /public/index] miss
+cache: [GET /public/index] miss
+cache: [GET /public/index] miss
+cache: [GET /public/index] miss
+cache: [GET /public/index] miss
+cache: [GET /public/index] miss
+cache: [GET /public/index] miss
+cache: [GET /public/index] miss
+cache: [GET /public/index] miss
+cache: [GET /public/index] miss
+cache: [GET /public/index] miss
+cache: [GET /public/index] miss
+cache: [GET /public/index] miss
+cache: [GET /public/index] miss
+cache: [GET /public/index] miss
+I, [2011-12-15T20:12:52.500462 #11432]  INFO -- : reaped #<Process::Status: pid 11445 exit 0> worker=0
+I, [2011-12-15T20:12:52.500661 #11432]  INFO -- : reaped #<Process::Status: pid 11448 exit 0> worker=1
+I, [2011-12-15T20:12:52.500820 #11432]  INFO -- : master complete
+I, [2011-12-15T20:52:12.727297 #20108]  INFO -- : unlinking existing socket=/tmp/unicorn.kolkominate.sock
+I, [2011-12-15T20:52:12.727528 #20108]  INFO -- : listening on addr=/tmp/unicorn.kolkominate.sock fd=5
+I, [2011-12-15T20:52:12.727802 #20108]  INFO -- : worker=0 spawning...
+I, [2011-12-15T20:52:12.735359 #20108]  INFO -- : worker=1 spawning...
+I, [2011-12-15T20:52:12.740481 #20138]  INFO -- : worker=0 spawned pid=20138
+I, [2011-12-15T20:52:12.740828 #20138]  INFO -- : Refreshing Gem list
+I, [2011-12-15T20:52:12.750133 #20108]  INFO -- : master process ready
+I, [2011-12-15T20:52:12.750953 #20141]  INFO -- : worker=1 spawned pid=20141
+I, [2011-12-15T20:52:12.751169 #20141]  INFO -- : Refreshing Gem list
+I, [2011-12-15T20:52:23.848378 #20138]  INFO -- : worker=0 ready
+I, [2011-12-15T20:52:23.848750 #20141]  INFO -- : worker=1 ready
+cache: [GET /] miss
+cache: [GET /] miss
+I, [2011-12-15T20:55:53.205827 #20108]  INFO -- : reaped #<Process::Status: pid 20138 exit 0> worker=0
+I, [2011-12-15T20:55:53.205990 #20108]  INFO -- : reaped #<Process::Status: pid 20141 exit 0> worker=1
+I, [2011-12-15T20:55:53.206151 #20108]  INFO -- : master complete
+I, [2011-12-15T20:56:07.045099 #20669]  INFO -- : unlinking existing socket=/tmp/unicorn.kolkominate.sock
+I, [2011-12-15T20:56:07.045530 #20669]  INFO -- : listening on addr=/tmp/unicorn.kolkominate.sock fd=5
+I, [2011-12-15T20:56:07.046009 #20669]  INFO -- : worker=0 spawning...
+I, [2011-12-15T20:56:07.056783 #20672]  INFO -- : worker=0 spawned pid=20672
+I, [2011-12-15T20:56:07.057135 #20672]  INFO -- : Refreshing Gem list
+I, [2011-12-15T20:56:07.065963 #20669]  INFO -- : worker=1 spawning...
+I, [2011-12-15T20:56:07.079810 #20669]  INFO -- : master process ready
+I, [2011-12-15T20:56:07.086777 #20675]  INFO -- : worker=1 spawned pid=20675
+I, [2011-12-15T20:56:07.087030 #20675]  INFO -- : Refreshing Gem list
+I, [2011-12-15T20:56:18.020898 #20672]  INFO -- : worker=0 ready
+I, [2011-12-15T20:56:18.023563 #20675]  INFO -- : worker=1 ready
+cache: [GET /] miss
+cache: [GET /] miss
+cache: [GET /] miss
+cache: [GET /] miss
+cache: [GET /] miss
+cache: [GET /] miss
+cache: [GET /users/sign_in] miss
+cache: [POST /users/sign_in] invalidate, pass
+cache: [GET /users/sign_up] miss
+cache: [POST /users] invalidate, pass
+cache: [GET /] miss
+cache: [GET /public/index] miss
+I, [2011-12-15T21:03:29.984289 #20669]  INFO -- : reaped #<Process::Status: pid 20672 exit 0> worker=0
+I, [2011-12-15T21:03:29.984447 #20669]  INFO -- : reaped #<Process::Status: pid 20675 exit 0> worker=1
+I, [2011-12-15T21:03:29.984786 #20669]  INFO -- : master complete
+I, [2011-12-15T21:11:58.036213 #23724]  INFO -- : unlinking existing socket=/tmp/unicorn.kolkominate.sock
+I, [2011-12-15T21:11:58.036680 #23724]  INFO -- : listening on addr=/tmp/unicorn.kolkominate.sock fd=3
+I, [2011-12-15T21:11:58.037186 #23724]  INFO -- : worker=0 spawning...
+I, [2011-12-15T21:11:58.050069 #23724]  INFO -- : worker=1 spawning...
+I, [2011-12-15T21:11:58.055339 #23727]  INFO -- : worker=0 spawned pid=23727
+I, [2011-12-15T21:11:58.055616 #23727]  INFO -- : Refreshing Gem list
+I, [2011-12-15T21:11:58.064523 #23730]  INFO -- : worker=1 spawned pid=23730
+I, [2011-12-15T21:11:58.064945 #23730]  INFO -- : Refreshing Gem list
+I, [2011-12-15T21:11:58.070129 #23724]  INFO -- : master process ready
+I, [2011-12-15T21:12:09.218811 #23730]  INFO -- : worker=1 ready
+I, [2011-12-15T21:12:09.222816 #23727]  INFO -- : worker=0 ready
+cache: [GET /] miss
+cache: [GET /fastenv] miss
+cache: [GET /fastenv] miss
+cache: [GET /intl/zh-CN/] miss
+cache: [GET /fastenv] miss
+cache: [GET /] miss
+cache: [HEAD /] miss
+cache: [GET /fastenv] miss
+cache: [GET //jmx-console/HtmlAdaptor] miss
+cache: [HEAD /] miss
+cache: [GET /pp/anp.php?a=U%5DQHTWAY%40M%5CUET&b=6979&c=4f61] miss
+cache: [HEAD /] miss
+cache: [HEAD /] miss
+cache: [GET /] miss
+cache: [GET /deny2/azenv.php] miss
+cache: [HEAD /] miss
+cache: [GET /fastenv] miss
+cache: [GET /fastenv] miss
+cache: [GET /deny2/azenv.php] miss
+cache: [GET /bin/hostname] miss
+cache: [GET /fastenv] miss
+cache: [GET /fastenv] miss
