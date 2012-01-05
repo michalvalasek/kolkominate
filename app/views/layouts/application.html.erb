@@ -38,7 +38,8 @@
 
 	<div id="sidebar">
 	  <ul id="nav">
-	    <li><a href="<%= expenses_path %>"><strong><%= image_tag "/images/nav/dashboard.png", :alt=>"Prehľad výdavkov" %> Výdavky</strong></a></li>
+	    <li><%= main_menu_item_for expenses_path, "Výdavky", "Chronologický prehľad výdavkov", "dashboard.png" %></li>
+      <li><%= main_menu_item_for categories_path, "Kategórie", "Výdavky podľa kategórií", "support.png" %></li>
 	  </ul>
 	</div>
 
