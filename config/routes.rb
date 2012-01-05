@@ -1,5 +1,9 @@
 Kolkominate::Application.routes.draw do
-  resources :tags
+
+  get "categories" => "categories#index", as: :categories
+  get "category/:id" => "categories#show", as: :category
+
+  #resources :tags
 
   resources :expenses
 
