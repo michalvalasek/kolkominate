@@ -52,6 +52,7 @@ class ExpensesController < ApplicationController
 
     respond_to do |format|
       if @expense.save
+        add_tagger_to_taggings(@expense)
         format.html { redirect_to @expense, notice: 'Expense was successfully created.' }
         format.json { render json: @expense, status: :created, location: @expense }
       else
@@ -69,6 +70,7 @@ class ExpensesController < ApplicationController
 
     respond_to do |format|
       if @expense.update_attributes(params[:expense])
+        add_tagger_to_taggings(@expense)
         format.html { redirect_to @expense, notice: 'Expense was successfully updated.' }
         format.json { head :ok }
       else
@@ -89,4 +91,13 @@ class ExpensesController < ApplicationController
       format.json { head :ok }
     end
   end
+
+  private
+
+    def add_tagger_to_taggings(expense)
+      RocketTag::Tagging.where("taggable_type='Expense' AND taggable_id=#{expense.id}").each do |tagging|
+        tagging.update_attributes({tagger_id: current_user.id, tagger_type: "User"})
+      end
+    end
+
 end
