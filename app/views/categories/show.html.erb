@@ -1,2 +1,18 @@
-<h1>Categories#show</h1>
-<p>Find me in app/views/categories/show.html.erb</p>
+<h2>Výdavky v kategórií <%= @category.name %></h2>
+
+<% start_new_block = true %>
+<% @expenses.each_with_index do |exp, index| %>
+  <% if start_new_block %>
+    <% start_new_block = false %>
+    <div class="textbox half">
+      <h2><%= exp.date %></h2>
+  <% end %>
+      <div class="textbox_content">
+        <strong><%= exp.value %> <%= exp.currency.symbol.html_safe %></strong>
+        <%= " - #{exp.description}" unless exp.description.blank? %>
+      </div>
+  <% if @expenses[index+1].nil? or @expenses[index+1].date!=exp.date %>
+    <% start_new_block = true %>
+    </div>
+  <% end %>
+<% end %>

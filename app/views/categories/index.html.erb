@@ -1,2 +1,19 @@
-<h1>Categories#index</h1>
-<p>Find me in app/views/categories/index.html.erb</p>
+<h2>Výdavky podľa kategórií</h2>
+
+<p>
+  <%= link_to "Zoradiť podľa abecedy", categories_path, class: "demo_custom" %> |
+  <%= link_to "Zoradiť podľa počtu výdavkov", categories_path(sort: "expenses"), class: "demo_custom" %>
+</p>
+
+<% @categories.each do |ctg| %>
+<% ctg_expenses = Expense.tagged_with([ctg.tag.name], :on => "categories") %>
+<div class="textbox half">
+  <h2><%= ctg.tag.name %></h2>
+  <div class="textbox_content">
+    Počet výdavkov v kategórii: <%= ctg_expenses.count %><br />
+    Posledný výdavok v kategórii: <%= ctg_expenses.last.date %>: <%= ctg_expenses.last.value %> <%= ctg_expenses.last.currency.symbol.html_safe %><br />
+    <%= link_to "Zobraziť prehľad kategórie", category_path(ctg.tag_id) %>
+  </div>
+</div>
+<% end %>
+
