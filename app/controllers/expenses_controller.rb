@@ -5,7 +5,7 @@ class ExpensesController < ApplicationController
   # GET /expenses
   # GET /expenses.json
   def index
-    @expenses = current_user.expenses
+    @expenses = current_user.expenses.order('created_at DESC')
 
     respond_to do |format|
       format.html # index.html.erb
@@ -46,6 +46,9 @@ class ExpensesController < ApplicationController
   # POST /expenses.json
   def create
     @expense = Expense.new(params[:expense])
+    unless @expense.date
+      @expense.date = Time.now.to_s[0,10]
+    end
     @expense.currency_id = Currency.find_by_name('Euro').id
     @expense.user_id = current_user.id
     @expense.categories = params[:categories].split(',')
@@ -55,9 +58,11 @@ class ExpensesController < ApplicationController
         add_tagger_to_taggings(@expense)
         format.html { redirect_to @expense, notice: 'Expense was successfully created.' }
         format.json { render json: @expense, status: :created, location: @expense }
+        format.js
       else
         format.html { render action: "new" }
         format.json { render json: @expense.errors, status: :unprocessable_entity }
+        format.js
       end
     end
   end

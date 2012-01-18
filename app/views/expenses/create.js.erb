@@ -1,0 +1,9 @@
+<% unless @expense.errors.any? %>
+  $('div.new-expense-form .errors').text('');
+  $('#expenses-list tbody').prepend('<%= escape_javascript(render @expense) %>');
+  $('#expense_value').val('');
+  $('#categories').val('');
+<% else %>
+  $('div.new-expense-form .errors').text("Nastala chyba pri ukladaní výdavku. Prosím, skúste to znova.");
+<% end %>
+

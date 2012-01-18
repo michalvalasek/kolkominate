@@ -1,0 +1,9 @@
+<div class="new-expense-form">
+  <div class="errors"></div>
+  <%= form_for Expense.new, remote: true do |f| %>
+  	<span>Pridať výdavok</span>
+    <%= f.text_field :value, size: 8 %> 
+    <span>&euro; &nbsp;&nbsp;&nbsp; do kategórií</span> <%= text_field_tag :categories, '', :size=>85, :class=>'text' %>
+  	<%= f.submit "Uložiť" %>
+  <% end %>
+</div>

@@ -1,29 +1,18 @@
 <h2>Výdavky</h2>
 
-<table cellpadding="0" cellspacing="0" width="100%" class="sortable">
+<%= render partial: 'shared/add_expense_form' %>
+
+<table cellpadding="0" cellspacing="0" width="100%" class="sortable" id="expenses-list">
   <thead>
-		<tr>
-			<th>Suma</th>
-			<th>Dátum</th>
-			<th>Kategórie</th>
-			<th></th>
-		</tr>
+    <tr>
+      <th>Suma</th>
+      <th>Dátum</th>
+      <th>Kategórie</th>
+      <th></th>
+    </tr>
   </thead>
   <tbody>
-    <% @expenses.each do |expense| %>
-			<tr class="<%= cycle("even","odd") %>">
-				<td><%= expense.value %> <%= expense.currency.symbol.html_safe %></td>
-				<td><%= expense.date %></td>
-				<td>
-          <%= categories_links_for(expense) %>
-        </td>
-				<td>
-				  <%= link_to 'Detaily', expense %> |
-					<%= link_to 'Upraviť', edit_expense_path(expense) %> |
-					<%= link_to 'Zmazať', expense, confirm: 'Ste si istý?', method: :delete %>
-			  </td>
-			</tr>
-		<% end %>
+    <%= render partial: @expenses %>
   </tbody>
 </table>
 

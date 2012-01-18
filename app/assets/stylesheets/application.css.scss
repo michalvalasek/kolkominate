@@ -5,3 +5,26 @@
  *= require_self
  *= require_tree . 
 */
+
+div.new-expense-form {
+	
+	background: #fbfbfb;
+	border: 1px solid #ddd;
+	padding: 7px;
+	margin-bottom: 20px;
+
+	.errors {
+		font-size: 14px;
+		color: #ff0000;
+		padding-bottom:7px;
+	}
+
+	form {
+		color: #676767;
+		font-size: 18px;
+		
+		span {
+			vertical-align: middle;
+		}
+	}
+}
