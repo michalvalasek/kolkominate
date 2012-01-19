@@ -47,7 +47,8 @@ module Kolkominate
 
 	  # Set special layout for some devise actions, such as login screen
     config.to_prepare do
-		  Devise::SessionsController.layout proc{ |controller| action_name=='new' ? 'devise' : 'application' }
+		  Devise::SessionsController.layout proc{ |controller| ['new'].include?(action_name) ? 'devise' : 'application' }
+          Devise::RegistrationsController.layout proc{ |controller| ['new'].include?(action_name) ? 'devise' : 'application' }
     end
 
 	  # Change style of the form fields with errors

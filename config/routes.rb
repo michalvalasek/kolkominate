@@ -12,6 +12,7 @@ Kolkominate::Application.routes.draw do
   devise_for :users do
 	  get "/login" => "devise/sessions#new", :as => :login
 	  get "/logout" => "devise/sessions#destroy", :as => :logout
+    get "/registration" => "devise/registrations#new", :as => :registration
   end
 
   # The priority is based upon order of creation:
