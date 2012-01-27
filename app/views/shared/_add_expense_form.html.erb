@@ -7,3 +7,15 @@
   	<%= f.submit "Uložiť" %>
   <% end %>
 </div>
+
+<script type="text/javascript">
+$(function() {
+  $('#categories').tokenInput('/categories.json',{
+    crossDomain: false,
+    theme: 'adminium',
+    hintText: 'Sem napíšte kategórie výdavku',
+    searchingText: 'Hľadá sa...',
+    noResultsText: 'Táto kategória zatiaľ neexistuje.'
+  });
+});
+</script>

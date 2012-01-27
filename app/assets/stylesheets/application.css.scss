@@ -8,10 +8,14 @@
 
 div.new-expense-form {
 	
+	width: 800px;
 	background: #fbfbfb;
 	border: 1px solid #ddd;
 	padding: 7px;
 	margin-bottom: 20px;
+	-webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
 
 	.errors {
 		font-size: 14px;
