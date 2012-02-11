@@ -20,6 +20,23 @@
 	<%= link_to "Prihláste sa", signin_path %> alebo sa <%= link_to "zaregistrujte", signup_path %>
 
 	<div id="content">
+		<% if flash[:notice] %>
+			<div class="message info" style="display: block;">
+			  <%= flash[:notice] %>
+		<% end  %>
+		<% if flash[:alert] %>
+			<div class="message errormsg" style="display: block;">
+			  <%= flash[:alert] %>
+		<% end %>
+		<% if flash[:success] %>
+			<div class="message sucess" style="display: block;">
+			  <%= flash[:success] %>
+		<% end %>
+		<% unless flash.empty? %>
+				<span class="close" title="Dismiss"></span>
+			</div>
+		<% end %>
+		
 		<%= yield %>
 	</div>
 

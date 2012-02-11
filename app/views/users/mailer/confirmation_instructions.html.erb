@@ -1,5 +1,7 @@
-<p>Welcome <%= @resource.email %>!</p>
+<p>Vitajte <%= @resource.email %>!</p>
 
-<p>You can confirm your account through the link below:</p>
+<p>Prosím, potvrďte svoju registráciu kliknutím na nasledujúci link:</p>
 
-<p><%= link_to 'Confirm my account', confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>
+<p><%= link_to 'Potvrdiť registráciu', confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>
+
+<p>Ak ste sa s touto emailovou adresou nezaregistrovali Vy, ignorujte, prosím, túto správu.</p>
