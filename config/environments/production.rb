@@ -59,5 +59,5 @@ Kolkominate::Application.configure do
   config.active_support.deprecation = :notify
 
 	# devise wants this
-	#config.action_mailer.default_url_options = { :host => 'kolkominate.sk' }
+	config.action_mailer.default_url_options = { :host => 'kolkominate.sk' }
 end
