@@ -5,3 +5,5 @@ log/*.log
 tmp/
 .sass-cache/
 vendor/bundle/
+.rake_tasks~
+.rbenv-version
