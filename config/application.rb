@@ -57,5 +57,20 @@ module Kolkominate
 
 	  # Change style of the form fields with errors
 	  ActionView::Base.field_error_proc = Proc.new { |html_tag, instance| html_tag }
+
+    # mailer
+    config.action_mailer.smtp_settings = {:enable_starttls_auto => false }
+    config.action_mailer.raise_delivery_errors = true
+    config.action_mailer.delivery_method = :smtp
+    ActionMailer::Base.smtp_settings = {
+      :address  => "smtp.coworking-piestany.sk",
+      :port  => 25,
+      :user_name  => "info@vinderhimlen.dk",
+      :password  => "ICWP6212011",
+      :authentication  => :login,
+      #:domain => "vinderhimlen.dk",
+      #:enable_starttls_auto => false,
+      :openssl_verify_mode  => 'none'
+    }
   end
 end
