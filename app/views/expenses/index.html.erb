@@ -1,6 +1,8 @@
-<h2>Výdavky</h2>
+<h2>Výdavky (<%= link_to '+', new_expense_path %>)</h2>
 
 <%= render partial: 'shared/add_expense_form' %>
+
+<%= render partial: 'shared/limit_expenses_form', locals: { action:'/expenses' } %>
 
 <table cellpadding="0" cellspacing="0" width="100%" class="sortable" id="expenses-list">
   <thead>
@@ -15,7 +17,3 @@
     <%= render partial: @expenses %>
   </tbody>
 </table>
-
-<br />
-
-<%= link_to 'Pridať výdavok', new_expense_path %>

@@ -38,7 +38,12 @@
 
 	<div id="sidebar">
 	  <ul id="nav">
-	    <li><%= main_menu_item_for expenses_path, "Výdavky", "Chronologický prehľad výdavkov", "dashboard.png" %></li>
+	    <li>
+	    	<%= main_menu_item_for expenses_path, "Výdavky", "Chronologický prehľad výdavkov", "dashboard.png" %>
+	    	<ul>
+	    		<li><%= link_to 'Pridať výdavok', new_expense_path %></li>
+	    	</ul>
+	    </li>
       <li><%= main_menu_item_for categories_path, "Kategórie", "Výdavky podľa kategórií", "support.png" %></li>
 	  </ul>
 	</div>

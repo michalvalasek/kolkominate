@@ -1,0 +1,9 @@
+<div class="limit-expenses-form quickformbox">
+  <%= form_tag(action, method:'get') do %>
+    <%= label_tag(:from, "Zobraziť len výdavky od:") %>
+    <%= text_field_tag(:from, params[:from], :class=>"text date_picker") %>
+    <%= label_tag(:to, "do:") %>
+    <%= text_field_tag(:to, params[:to], :class=>"text date_picker") %>
+  <%= submit_tag("Zobraziť", :class=>"submit") %> <%= link_to 'Zrušiť filter', action %>
+  <% end %>
+</div>

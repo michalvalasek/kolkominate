@@ -7,7 +7,7 @@
   </div>
   <div class="field">
     <%= f.label :date, "Dátum" %><br />
-    <%= f.date_select :date %>
+    <%= f.text_field :date, :class=>"text datepicker", :size=>10 %>
   </div>
 	<div class="field">
     <%= f.label :categories, "Kategórie oddelené čiarkami" %><br />

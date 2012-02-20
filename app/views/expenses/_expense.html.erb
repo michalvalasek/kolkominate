@@ -1,6 +1,6 @@
 <tr class="<%= cycle("even","odd") %>">
   <td><%= expense.value %> <%= expense.currency.symbol.html_safe %></td>
-  <td><%= expense.date %></td>
+  <td><%= expense.date.strftime('%d.%m.%Y') %></td>
   <td><%= categories_links_for(expense) %></td>
   <td>
     <%= link_to 'Detaily', expense %> |

@@ -13,4 +13,10 @@ class Expense < ActiveRecord::Base
 	def value=(value)
 		write_attribute(:value,value.sub(",","."))
 	end
+
+	def self.date_between(from,to)
+		from = '01.01.2012' if from.blank?
+		to = Time.now.strftime("%d.%m.%Y") if to.blank?
+		where(date: (from.to_date..to.to_date))
+	end
 end

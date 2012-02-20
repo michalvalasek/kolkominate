@@ -6,8 +6,7 @@
  *= require_tree . 
 */
 
-div.new-expense-form {
-	
+div.quickformbox {
 	width: 800px;
 	background: #fbfbfb;
 	border: 1px solid #ddd;
@@ -17,7 +16,7 @@ div.new-expense-form {
     -moz-border-radius: 3px;
     border-radius: 3px;
 
-	.errors {
+    .errors {
 		font-size: 14px;
 		color: #ff0000;
 		padding-bottom:7px;

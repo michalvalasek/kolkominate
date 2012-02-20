@@ -5,7 +5,7 @@ class ExpensesController < ApplicationController
   # GET /expenses
   # GET /expenses.json
   def index
-    @expenses = current_user.expenses.order('created_at DESC')
+    @expenses = current_user.expenses.date_between(params[:from],params[:to]).order('created_at DESC')
 
     respond_to do |format|
       format.html # index.html.erb

@@ -7,7 +7,7 @@
 
 <p>
   <b>Dátum:</b>
-  <%= @expense.date %>
+  <%= @expense.date.strftime('%d.%m.%Y') %>
 </p>
 
 <% if @expense.categories %>
